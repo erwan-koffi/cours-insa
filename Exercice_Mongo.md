@@ -1,5 +1,7 @@
 # Exercice 1
 
+**Collection**: restaurants
+
 1. Retourner un restaurant qui a un grade avec un score supérieur à 7.
     ```javascript
     db.restaurants.findOne({"grades.score":{$gt: 7}});
@@ -13,7 +15,7 @@
         { "grades": { $elemMatch: {"grade" : "A", "score": {$gt: 10} } }}
     );
     ```
-3. Retourner un restaurant qui a un grade avec une date égale à "2012-03-27T00:00:00Z", un grade (champ grade) A, un score supérieur ou égal à 10 et dont le tableau grade à une taille de 5.
+3. Retourner un restaurant qui a un grade avec une date égale à `2012-03-27T00:00:00Z`, un grade (champ grade) A, un score supérieur ou égal à 10 et dont le tableau grade à une taille de 5.
     ```javascript
     db.restaurants.findOne({$and : [ 
         { "grades": { $elemMatch: 
@@ -59,9 +61,11 @@
 
 # Exercice 2
 
+**Copier la collection**: restaurants
+
 1. Mettre à jour le champ "cuisine" d'un document en faisant une recherche sur l'ObjectId de votre souhait.
 
-2. Mettre à jour tous les documents ayant comme valeur pour le champ cuisine: "CafÃ©/Coffee/Tea" par "Café/Coffee/Tea".
+2. Mettre à jour tous les documents ayant comme valeur pour le champ cuisine: `CafÃ©/Coffee/Tea` par `Café/Coffee/Tea`.
 
 3. Ajouter un élément au tableau grades à un restaurant.
 
@@ -70,6 +74,8 @@
 ---
 
 # Exercice 3
+
+**Collection**: zips
 
 1. Calculer la population par état et garder que ceux dont la population est supérieur à 10 millions.
 
@@ -80,6 +86,8 @@
 ---
 
 # Exercice 4
+
+**Copier la collection**: grades
 
 1) Calculer la moyenne de chaque étudiant
 
@@ -93,5 +101,7 @@
 ---
 
 # Exercice 5
+
+**Copier la collection**: grades
 
 1. Mettre à jour la collection grades en supprimant la plus mauvaise note de type homework de chaque étudiant.
