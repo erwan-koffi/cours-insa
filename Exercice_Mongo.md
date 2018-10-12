@@ -61,7 +61,7 @@
 
 # Exercice 2
 
-**Copier la collection**: restaurants
+**Copier la collection**: restaurants `robo3t -> clic droit sur la collection test.restaurants -> dupliquer la collection`
 
 1. Mettre à jour le champ "cuisine" d'un document en faisant une recherche sur l'ObjectId de votre souhait.
     ```javascript
@@ -99,7 +99,7 @@
 
 # Exercice 4
 
-**Copier la collection**: grades
+**Copier la collection**: grades `robo3t -> clic droit sur la collection test.grades -> dupliquer la collection`
 
 1) Calculer la moyenne de chaque étudiant
 
@@ -114,6 +114,6 @@
 
 # Exercice 5
 
-**Copier la collection**: grades
+**Copier la collection**: grades `robo3t -> clic droit sur la collection test.grades -> dupliquer la collection`
 
 1. Mettre à jour la collection grades en supprimant la plus mauvaise note de type homework de chaque étudiant.
