@@ -90,10 +90,25 @@
 **Collection**: zips
 
 1. Calculer la population par état et garder que ceux dont la population est supérieur à 10 millions.
+    ```javascript
+    db.zips.aggregate( [    
+        { $group: { _id: "$state", totalPop: { $sum: "$pop" } } },    
+        { $match: { totalPop: { $gte: 1e7 } } } 
+    ])
+    ```
 
 2. Pour chaque état, sous la forme `{"biggestCity" : { "name" : "WORCESTER", "pop" : 169856 },"smallestCity" : { "name" : "BUCKLAND", "pop" : 16 },"state" : "MA"}` la ville avec: 
  * la plus grosse population ainsi que son nom
  * la plus petite population ainsi que son nom 
+    ```javascript
+    db.zips.aggregate( [    
+        { $group:{_id: { state: "$state", city: "$city" }, pop: { $sum: "$pop" }}}, 
+        { $sort: { pop: 1 } },   
+        { $group:{_id: "$_id.state", biggestCity:{ $last: "$_id.city" },biggestPop: { $last: "$pop" },smallestCity: {$first: "$_id.city" },smallestPop:  { $first: "$pop" }}},
+        { $project:{ _id: 0, state: "$_id", biggestCity:{name: "$biggestCity",pop: "$biggestPop" }, smallestCity: {name: "$smallestCity", pop:"$smallestPop" }}} 
+    ])
+    ```
+
 
 ---
 
@@ -103,7 +118,10 @@
 
 1) Calculer la moyenne de chaque étudiant
 
+
 2) Calculer la moyenne de chaque classe en ayant préalablement calculé la moyenne de chaque étudiant
+    
+
 
 3) La même chose que précédemment (2.) en effectuant les modifications suivantes: 
     * Supprimer la plus mauvaise note de chaque étudiant.
