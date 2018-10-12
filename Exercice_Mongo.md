@@ -117,16 +117,52 @@
 **Copier la collection**: grades `robo3t -> clic droit sur la collection test.grades -> dupliquer la collection`
 
 1) Calculer la moyenne de chaque étudiant
-
+    ```javascript
+    db.grades.aggregate(  [     
+        { $unwind : "$scores" },     
+        { $group : { _id : {student:"$student_id", class : "$class_id"} , avgStudent : { $avg: "$scores.score" } } }   
+    ]);
+    ```
 
 2) Calculer la moyenne de chaque classe en ayant préalablement calculé la moyenne de chaque étudiant
-    
-
+    ```javascript
+    db.grades.aggregate(   [     
+        { $unwind : "$scores" },     
+        { $group : { _id: {student:"$student_id", class: "$class_id"} , avgStudent : { $avg: "$scores.score" } } }, 
+        { $group : {_id: "$_id.class", avgClass : {$avg: "$avgStudent"}}}   
+    ]);
+    ```
 
 3) La même chose que précédemment (2.) en effectuant les modifications suivantes: 
     * Supprimer la plus mauvaise note de chaque étudiant.
     * Faire une jointure avec la collection classe pour récupérer son nom.
     * Enregistrer le résultat dans une autre collection sous la forme: `{ "avgClass" : 55.970072353204436, "className" : "classe 5" }`
+    ```javascript
+    db.grades.aggregate([ 
+        {$project: {"student_id":"$student_id","class_id": "$class_id", "scores":{ $filter: { input: "$scores.score", as: "score", cond: { $gt: [  "$$score", { $min: "$scores.score"} ] } } } } },
+        {$unwind:"$scores"},
+        {$group : { _id : {student:"$student_id", class : "$class_id"} , avgStudent : { $avg : "$scores" } } },
+        {$group : {_id: "$_id.class", avgClass : {$avg: "$avgStudent"}}}, 
+        {$lookup:{ from: "classe" , localField: "_id", foreignField: "class_id", as: "classInfo" }},        
+        {$project: {_id:0, avgClass: 1, className: { $arrayElemAt: [ "$classInfo.name", 0 ] }}},
+        {$out: "avgClass"}
+    ]);
+    ```
+
+    ```javascript
+    db.grades.aggregate([
+        {$unwind : "$scores"},
+        {$sort : {"scores.score" : -1}},
+        {$group : {_id: {class: "$class_id", student: "$student_id"},notes: {$push : "$scores.score"}}},    
+        {$project: { _id: 0, class: "$_id.class", student: "$_id.student", notes: { $slice: [ "$notes", {$add:[{ $size: "$notes" }, -1] }] } } },
+        {$unwind : "$notes"},
+        {$group: {_id: {student: "$student",class : "$class"}, moyenne: {$avg: "$notes"}}},
+        {$group: {_id: "$_id.class", moyenne: {$avg: "$moyenne"}}},
+        {$lookup:{from: "classe", localField: "_id", foreignField: "class_id", as: "nomDeClasse"}},
+        {$project: {_id: 0, className: { $arrayElemAt: [ "$nomDeClasse.name", 0 ] }, avgClass: "$moyenne" } },
+        {$out: "AvgByClass"}
+    ]);
+    ```
 
 ---
 
