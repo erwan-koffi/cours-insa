@@ -64,12 +64,24 @@
 **Copier la collection**: restaurants
 
 1. Mettre à jour le champ "cuisine" d'un document en faisant une recherche sur l'ObjectId de votre souhait.
+    ```javascript
+    db.restaurants.update({_id: ObjectId("57bd62688acc811fe3b3826c")}, { $set: {"cuisine": "test"} })
+    ```
 
 2. Mettre à jour tous les documents ayant comme valeur pour le champ cuisine: `CafÃ©/Coffee/Tea` par `Café/Coffee/Tea`.
+    ```javascript
+    db.restaurants.update( {"cuisine": "CafÃ©/Coffee/Tea"}, { $set : {"cuisine": "Café/Coffee/Tea"}}, {multi: true})
+    ```
 
 3. Ajouter un élément au tableau grades à un restaurant.
+    ```javascript
+    db.restaurants.update({_id: ObjectId("59d76ea4ce2dc4fbe7e91d59")}, { $push: { "grades": { "date" : ISODate("2011-10-19T00:00:00Z"), "grade" : "A", "score" : 13 }  } } )
+    ```
 
 4. Ajouter un nouvel élément au tableau grades de ce restaurant en ne gardant que les 4 meilleurs scores.
+    ```javascript
+    db.restaurants.update({_id: ObjectId("57bd62688acc811fe3b3826c")},{$push:{"grades": {$each : [ {"date" : ISODate("2011-10-19T00:00:00Z"), "grade" : "A", "score" : 14 }] , $sort: {"score": -1}, $slice : 3 } }} )
+    ```
 
 ---
 
