@@ -1,3 +1,7 @@
+# Installer CQLSH
+
+`pip install cqlsh`
+
 # Exercice 1
 
 On cherche à modéliser les ventes de produits à des utilisateurs.
