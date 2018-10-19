@@ -1,0 +1,4 @@
+plugin {
+    id 'scala'
+}
+

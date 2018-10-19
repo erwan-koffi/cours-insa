@@ -2,7 +2,7 @@
 
 `pip install cqlsh`
 
-`cqlsh asi-tdm.insa-rouen.fr`
+`cqlsh --cqlversion=3.4.4 asi-tdm.insa-rouen.fr`
 
 # Exercice 1
 
