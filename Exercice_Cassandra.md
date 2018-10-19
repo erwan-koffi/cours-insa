@@ -18,7 +18,7 @@ Nous souhaitons effectuer des recherches seulement par rapport aux tickets et au
 
 5) Insérer des données dans les tables via des inserts.
 
-6) Insérer des données via un fichier JSON.
+6) Insérer des données via du JSON.
 
 7) Mettre à jour une des lignes
 
