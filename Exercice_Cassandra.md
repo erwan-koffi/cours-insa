@@ -2,6 +2,8 @@
 
 `pip install cqlsh`
 
+`cqlsh asi-tdm.insa-rouen.fr`
+
 # Exercice 1
 
 On cherche à modéliser les ventes de produits à des utilisateurs.
