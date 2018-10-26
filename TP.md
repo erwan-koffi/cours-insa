@@ -5,7 +5,7 @@ https://www.data.gouv.fr/fr/datasets/lieux-culturels-en-normandie
 
 2. Effectuer une requête pour récupérer tous les lieux culturels situés à 15km de la coordonnée suivante: `49.4432° N, 1.1000° E`
 
-3. Récupérer l'ensemble des addresses des `SCENE DE MUSIQUES ACTUELLES`.
+3. Récupérer l'ensemble des addresses dont le label est `SCENE DE MUSIQUES ACTUELLES`.
 
 4. Afficher uniquement la liste des `noms` des lieux par villes.
 
