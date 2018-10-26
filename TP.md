@@ -1,4 +1,4 @@
-# MongoDB
+# MongoDB (asi-tdm.insa-rouen.fr)
 1. A l'aide de l'outil de votre choix intégrer la liste des `lieux culturels en Normandie` suivant dans une collection MongoDB:
 
 https://www.data.gouv.fr/fr/datasets/lieux-culturels-en-normandie
@@ -11,7 +11,7 @@ https://www.data.gouv.fr/fr/datasets/lieux-culturels-en-normandie
 
 5. Afficher le nombre de lieux du secteur `Livre et lecture` par département.
 
-# Cassandra
+# Cassandra (asi-tdm.insa-rouen.fr)
 1. À l'aide de l'outil de votre choix, intégrer les `statistiques mensuelles du nombre de téléchargements des jeux de données` dans une table Cassandra:
 
 https://www.data.gouv.fr/fr/datasets/statistiques-mensuelles-du-nombre-de-telechargements-des-jeux-de-donnees-open-data-enseignement-superieur-et-recherche/#_
