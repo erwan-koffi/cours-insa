@@ -1,0 +1,24 @@
+plugins {
+    id 'scala'
+    id "com.github.johnrengelman.shadow" version "4.0.4"
+}
+
+group 'fr.koffi'
+version '1.0.0-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation group: 'org.scala-lang', name: 'scala-library', version: "2.11.12"
+    implementation group: 'org.apache.hadoop', 'name': 'hadoop-client', version: '2.9.2'
+}
+
+shadowJar {
+    manifest {
+        attributes('Main-Class': "fr.insa.hadoop.yarn.LaunchMapReduce")
+    }
+}
