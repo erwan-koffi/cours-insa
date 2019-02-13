@@ -16,7 +16,7 @@ object ReadWriteHdfs extends App {
 
   System.setProperty("HADOOP_USER_NAME", "hadoop")
   val configuration = new Configuration()
-  configuration.set("fs.default.name", "hdfs://51.15.133.130:9000")
+  configuration.set("fs.default.name", "hdfs://namenode:9000")
   configuration.set("dfs.datanode.use.datanode.hostname", "true")
   configuration.set("dfs.client.use.datanode.hostname", "true")
 
