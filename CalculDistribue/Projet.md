@@ -9,5 +9,5 @@ Trois ressources sont à votre disposition:
 
 Le rendu sera à envoyer à l'adresse erwan.koffi[at]gmail.com:
   * Le code source de l'entraînement de l'algorithme et eventuellement la façon de l'exécuter.
-  * Le fichier hidden contenant la classification prédite par votre algorithme.
+  * Le fichier `noclass.json` contenant la classification prédite par votre algorithme.
   * Une page décrivant votre méthode ansi qu'où intervient la distribution des calculs.
