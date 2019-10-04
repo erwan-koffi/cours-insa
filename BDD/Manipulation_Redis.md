@@ -1,6 +1,6 @@
 # Exemple
 
-Aller sur https://tryredis.io
+Aller sur https://try.redis.io
 Liste des commandes: https://redis.io/commands
 
 0. Sélectionner une base de donnée.
