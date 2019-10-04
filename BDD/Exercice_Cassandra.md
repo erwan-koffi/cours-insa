@@ -91,7 +91,7 @@ INSERT INTO produitsTickets JSON '{"idProduit": 1, "ticketId": 1, "quantite": 5}
 
 9) Supprimer une table
 
-#Exercice 2
+# Exercice 2
 Nous allons travailler sur table d'UVs (Unité de valeur crédits ECTS). Les UVs seront caractérisées par un id, un code et un titre.
 
 1) Créez une table contenant les 3 colonnes décrites ci-dessus.
@@ -104,7 +104,7 @@ Nous allons travailler sur table d'UVs (Unité de valeur crédits ECTS). Les UVs
 
 5) Faire la modification en conséquence sur chaque ligne de la table.
 
-#Exercice 3
+# Exercice 3
 On garde la table UV mais on ajoute une relation 1..n entre une UV et des étudiants.
 
 1) Comment va-t-on gérer dans Cassandra les étudiants de chaque UV ?
