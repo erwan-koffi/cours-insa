@@ -1,5 +1,8 @@
 # Exemple
 
+Aller sur https://tryredis.io
+Liste des commandes: https://redis.io/commands
+
 0. Sélectionner une base de donnée.
 
 1. Créer une clé `test:cle` au format String ayant pour valeur `valeur`.
