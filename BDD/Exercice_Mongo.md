@@ -1,5 +1,3 @@
-Serveur MongoDB: **asi-tdm.insa-rouen.fr**
-
 # Exercice 1
 
 **Collection**: restaurants
