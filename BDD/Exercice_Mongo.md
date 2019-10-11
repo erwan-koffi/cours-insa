@@ -8,6 +8,13 @@
 4. La même chose de précédemment (3.) en projetant le premier élément du tableau qui matche la condition.
 5. Rechercher un restaurant avec un grade à A et un grade à Z.
 6. Executer les requêtes suivantes et analyser:
+    ```javascript
+    db.restaurants.find({"grades.grade":{$all:["A","Z"]}}).toArray().length;
+    db.restaurants.find({$and:[{"grades.grade":"A"},{"grades.grade":"Z"}]}).toArray().length; 
+    db.restaurants.find({"grades.grade":"A","grades.grade":"Z"}).toArray().length;
+    db.restaurants.find({"grades.grade": {$eq : "A","$eq":"Z"}}).toArray().length;
+    db.restaurants.find({ "grades": { $elemMatch: { grade: "A", grade: "Z" } } }).toArray().length;
+    ```
 ---
 
 # Exercice 2
