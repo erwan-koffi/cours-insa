@@ -15,75 +15,16 @@ Pour chaque vente, un ticket de caisse est créé sur lequel est indiqué le pri
 Nous souhaitons effectuer des recherches seulement par rapport aux tickets et aux produits.
 
 1) Proposer une modélisation normalisée.
-```sql
-CREATE TABLE clients(
-    idClient int,
-    nom varchar,
-    prenom varchar,
-    age int,
-    PRIMARY KEY(idClient ));
-```
-
-```sql
-CREATE TABLE produits(
-    idProduit int,
-    description varchar,
-    PRIMARY KEY(idProduit ));
-```
-
-```sql
-CREATE TABLE tickets(
-    idTicket int,
-    clientId int,
-    produitId int,
-    quantite int,
-    PRIMARY KEY(idTicket , clientId, produitId));
-```
-
-```sql
-CREATE TABLE produitsTickets(
-    idProduit int,
-    ticketId int,
-    quantite int,
-    PRIMARY KEY(idProduit , ticketId  ));
-```
 
 2) Proposer maintenant la modélisation pour Cassandra.
-```sql
-CREATE TABLE ticket (
-  id uuid,
-  id_ticket int,
-  firstname text static,
-  lastname text static,
-  age int static,
-  id_article int,
-  description text,
-  price DOUBLE,
-  quantity int,
-  PRIMARY KEY (id, id_ticket, id_article)
-);
-```
 
 3) Créer un keyspace <nom>.
-```sql
-CREATE KEYSPACE <nom> WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 3 };
-```
 
 4) Créer les tables nécessaires.
 
-
 5) Insérer des données dans les tables via des inserts.
 
-```sql
-INSERT INTO ticket(id, id_ticket, id_article, age, description, firstname, lastname, price, quantity) VALUES (uuid(), 1, 2, 25, 'coca', 'Marc', 'Mathieu', 2, 2);
-
-```
-
 6) Insérer des données via du JSON.
-
-```sql
-INSERT INTO produitsTickets JSON '{"idProduit": 1, "ticketId": 1, "quantite": 5}'
-```
 
 7) Mettre à jour une des lignes
 
