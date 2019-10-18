@@ -105,34 +105,35 @@ DROP TABLE ticket;
 Nous allons travailler sur table d'UVs (Unité de valeur crédits ECTS). Les UVs seront caractérisées par un id, un code et un titre.
 
 1) Créez une table contenant les 3 colonnes décrites ci-dessus.
+```cassandraql
+CREATE TABLE uv (
+  id int primary key,
+  code text,
+  title text
+);
+```
 
 2) Insérez des données dans votre table.
+```cassandraql
+INSERT INTO uv(id, code, title) VALUES (0, 'UV_0', 'Proto unité de valeur');
+INSERT INTO uv(id, code, title) VALUES (1, 'UV_1', 'Première unité de valeur');
+INSERT INTO uv(id, code, title) VALUES (2, 'UV_2', 'Seconde unité de valeur');
+```
 
 3) Récupérez les données de l'UV dont l'id vaut 1.
+```cassandraql
+SELECT * FROM uv WHERE id = 1;
+```
 
-4) Modifiez la table pour ajouter un attribut type indiquant si l'UV est une CS, TM etc.
+4) Modifiez la table pour ajouter un attribut type indiquant si l'UV est une CS ou TM.
+```cassandraql
+ALTER TABLE uv ADD uv_type text;
+```
 
 5) Faire la modification en conséquence sur chaque ligne de la table.
+```cassandraql
+UPDATE uv SET uv_type = 'CS' WHERE id = 1;
+UPDATE uv SET uv_type = 'TM' WHERE id = 2;
+```
 
-# Exercice 3
-On garde la table UV mais on ajoute une relation 1..n entre une UV et des étudiants.
 
-1) Comment va-t-on gérer dans Cassandra les étudiants de chaque UV ?
- 
-Est-ce qu'on crée une table d'étudiants ?
-
-2) Modifiez la table pour ajouter une collection d'étudiants. Un étudiant sera caractérisé par un champ login de type text.
-
-3) Mettez à jour la collection d'étudiants en ajoutant des étudiants dans les UVs.
-
-4) Cherchez les lignes dont la colonne 'etudiants' contient une des valeurs que vous avez renseigné.
-
-5) Enlevez l'un des étudiants d'une UV, puis enlevez les tous.
-
-6) Nous voulons maintenant ajouter des informations supplémentaires pour chaque UV : nous voulons connaître les personnes qui assurent les différents rôles de responsable de l'UV, enseignant et chargé de TD dans l'UV.
-
-7) Alimenter les responsables pour une des UVS.
-
-8) Quelle est la quantité d'UVs de type 'CS' ?
-
-9) Quelle est la quantité d'UVs par type?
