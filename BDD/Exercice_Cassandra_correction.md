@@ -131,7 +131,7 @@ Est-ce qu'on crée une table d'étudiants ?
 
 6) Nous voulons maintenant ajouter des informations supplémentaires pour chaque UV : nous voulons connaître les personnes qui assurent les différents rôles de responsable de l'UV, enseignant et chargé de TD dans l'UV.
 
-7) Alimenter le rôle pour une des UVS.
+7) Alimenter les responsables pour une des UVS.
 
 8) Quelle est la quantité d'UVs de type 'CS' ?
 
