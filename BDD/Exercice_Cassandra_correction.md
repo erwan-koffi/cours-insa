@@ -98,7 +98,7 @@ DELETE age FROM ticket WHERE id_ticket = 1 AND id_article = 2
 9) Supprimer une table
 
 ```cassandraql
-DELETE ticket;
+DROP TABLE ticket;
 ```
 
 # Exercice 2
