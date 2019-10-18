@@ -58,7 +58,7 @@ CREATE TABLE ticket (
   description text,
   price DOUBLE,
   quantity int,
-  PRIMARY KEY ((id_ticket, id_article))
+  PRIMARY KEY (id_ticket, id_article)
 );
 ```
 
