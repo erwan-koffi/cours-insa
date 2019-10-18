@@ -21,23 +21,21 @@ CREATE TABLE clients(
     nom varchar,
     prenom varchar,
     age int,
-    PRIMARY KEY(idClient ));
+    PRIMARY KEY(idClient));
 ```
 
 ```sql
 CREATE TABLE produits(
     idProduit int,
     description varchar,
-    PRIMARY KEY(idProduit ));
+    PRIMARY KEY(idProduit));
 ```
 
 ```sql
 CREATE TABLE tickets(
     idTicket int,
     clientId int,
-    produitId int,
-    quantite int,
-    PRIMARY KEY(idTicket , clientId, produitId));
+    PRIMARY KEY(idTicket , clientId));
 ```
 
 ```sql
@@ -45,5 +43,21 @@ CREATE TABLE produitsTickets(
     idProduit int,
     ticketId int,
     quantite int,
-    PRIMARY KEY(idProduit , ticketId  ));
+    PRIMARY KEY(idProduit , ticketId));
+```
+
+2) Proposer maintenant la modélisation pour Cassandra.
+```sql
+CREATE TABLE ticket (
+  id uuid,
+  id_ticket int,
+  firstname text static,
+  lastname text static,
+  age int static,
+  id_article int,
+  description text,
+  price DOUBLE,
+  quantity int,
+  PRIMARY KEY ((id_ticket, id_article))
+);
 ```
