@@ -1,6 +1,6 @@
 # Exemple
 
-Se rendre sur ...
+Se rendre sur http://trivisa.fr:7474
 
 1. Créer un étudiant ayant comme propriétés un `nom`, un `prénom` ainsi qu'un `age`
 
