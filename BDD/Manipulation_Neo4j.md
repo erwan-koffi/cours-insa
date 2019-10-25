@@ -22,14 +22,14 @@ i.e. `MATCH (ee:Person) RETURN ee`
 
 i.e. `MATCH (ee:Person) WHERE ee.lastname = "Doe" RETURN ee`
 
-i.e. `MATCH (ee:Person {lastname = "Doe"}) RETURN ee`
+i.e. `MATCH (ee:Person {lastname: "Doe"}) RETURN ee`
 
 7. Relier certains étudiants précédemment créés à la classe créée précedemment.
 
 i.e.
 ```
-MATCH (ee:Person), (ac:Activity) WHERE ee.name = "John" AND activity.name = "music"
-CREATE (ee)-[:PLAYS {since: 2005}]->(aa)
+MATCH (ee:Person), (ac:Activity) WHERE ee.name = "John" AND ac.name = "music"
+CREATE (ee)-[:PLAYS {since: 2005}]->(ac)
 ```
 
 8. N'afficher que les étudiants appartenant à la classe.
