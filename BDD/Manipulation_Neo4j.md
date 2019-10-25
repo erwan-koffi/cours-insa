@@ -21,6 +21,7 @@ i.e. `MATCH (ee:Person) RETURN ee`
 6. N'afficher que les étudiant ayant un nom en particulier.
 
 i.e. `MATCH (ee:Person) WHERE ee.lastname = "Doe" RETURN ee`
+
 i.e. `MATCH (ee:Person {lastname = "Doe"}) RETURN ee`
 
 7. Relier certains étudiants précédemment créés à la classe créée précedemment.
