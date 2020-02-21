@@ -12,4 +12,4 @@ Le rendu sera à envoyer à l'adresse erwan.koffi[at]gmail.com:
   * Le fichier `noclass.json` contenant la classification prédite par votre algorithme.
   * Une page décrivant votre méthode ansi qu'où intervient la distribution des calculs.
 
-Projet à rendre pour le 03 mars 2019 23:59:59.
+Projet à rendre pour le 15 mars 2020 23:59:59.
