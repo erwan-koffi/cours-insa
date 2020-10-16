@@ -151,7 +151,6 @@ ALTER TABLE uv ADD students set<text>;
 ```cassandraql
 UPDATE uv SET students=students+{'etudiant_1'} WHERE id = 0;
 UPDATE uv SET students=students+{'etudiant_2'} WHERE id = 1;
-UPDATE uv SET students=students+{'etudiant_3'} WHERE id > -1;
 ```
 4) Cherchez les lignes dont la colonne 'etudiants' contient une des valeurs que vous avez renseigné.
 ```cassandraql
