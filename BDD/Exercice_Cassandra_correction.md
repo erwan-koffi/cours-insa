@@ -80,7 +80,7 @@ INSERT INTO ticket(id, id_ticket, id_article, age, description, firstname, lastn
 6) Insérer des données via du JSON.
 
 ```sql
-INSERT INTO produitsTickets JSON '{"id": "bc7263ec-f1ad-11e9-9ae6-9cb6d0917299", "id_ticket": 5, "id_article": 1, "quantity": 5}'
+INSERT INTO ticket JSON '{"id": "bc7263ec-f1ad-11e9-9ae6-9cb6d0917299", "id_ticket": 5, "id_article": 1, "quantity": 5}'
 ```
 
 7) Mettre à jour une des lignes
