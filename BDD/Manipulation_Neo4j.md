@@ -1,6 +1,6 @@
 # Exemple
 
-Se rendre sur http://trivisa.fr:7474 ou https://sandbox.neo4j.com/?ref=sandbox-lp-cta
+Se rendre sur https://sandbox.neo4j.com/?ref=sandbox-lp-cta
 
 1. Créer un étudiant ayant comme propriétés un `nom`, un `prénom` ainsi qu'un `age`
 
