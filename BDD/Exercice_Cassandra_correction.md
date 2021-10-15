@@ -43,6 +43,7 @@ CREATE TABLE produitsTickets(
     idProduit int,
     ticketId int,
     quantite int,
+    price double,
     PRIMARY KEY(idProduit , ticketId));
 ```
 
