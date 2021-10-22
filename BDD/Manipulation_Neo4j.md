@@ -1,6 +1,6 @@
 # Exemple
 
-Se rendre sur https://sandbox.neo4j.com/?ref=sandbox-lp-cta
+Se rendre sur http://erwankoffi:7474
 
 1. Créer un étudiant ayant comme propriétés un `nom`, un `prénom` ainsi qu'un `age`
 
