@@ -1,6 +1,6 @@
 # Exemple
 
-Se rendre sur http://erwankoffi.fr:7474
+Se rendre sur http://iti-tdm-22.insa-rouen.fr:7474
 
 1. Créer un étudiant ayant comme propriétés un `nom`, un `prénom` ainsi qu'un `age`
 
