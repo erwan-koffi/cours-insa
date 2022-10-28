@@ -19,7 +19,7 @@
 
 # Exercice 2
 
-**Copier la collection**: restaurants `datagrip -> db.grades.aggregate([{$out: "<new_collection>"}])`
+**Copier la collection**: restaurants `datagrip -> db.restaurants.aggregate([{$out: "<new_collection>"}])`
 
 1. Mettre à jour le champ "cuisine" d'un document en faisant une recherche sur l'ObjectId de votre souhait.
 
