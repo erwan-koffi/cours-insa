@@ -9,7 +9,7 @@
 2. Retourner un restaurant qui a un grade (champ grade) à A avec un score supérieur à 10.
     ```javascript
     db.restaurants.find({$and : [ 
-        { "grades": { $elemMatch: {"grade" : "A", "score": {$gt: 10} } }}
+         {"grade" : "A"}, {"score": {$gt: 10} }
     ]});
     db.restaurants.find(
         { "grades": { $elemMatch: {"grade" : "A", "score": {$gt: 10} } }}

@@ -19,7 +19,7 @@
 
 # Exercice 2
 
-**Copier la collection**: restaurants `robo3t -> clic droit sur la collection test.restaurants -> dupliquer la collection`
+**Copier la collection**: restaurants `datagrip -> db.restaurants.aggregate([{$out: "<new_collection>"}])`
 
 1. Mettre à jour le champ "cuisine" d'un document en faisant une recherche sur l'ObjectId de votre souhait.
 
@@ -45,7 +45,7 @@
 
 # Exercice 4
 
-**Copier la collection**: grades `robo3t -> clic droit sur la collection test.grades -> dupliquer la collection`
+**Copier la collection**: grades `datagrip -> db.grades.aggregate([{$out: "<new_collection>"}])`
 
 1) Calculer la moyenne de chaque étudiant
 
@@ -60,6 +60,6 @@
 
 # Exercice 5
 
-**Copier la collection**: grades `robo3t -> clic droit sur la collection test.grades -> dupliquer la collection`
+**Copier la collection**: grades ``datagrip -> db.grades.aggregate([{$out: "<new_collection>"}])`
 
 1. Mettre à jour la collection grades en supprimant la plus mauvaise note de type homework de chaque étudiant.
