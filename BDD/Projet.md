@@ -2,7 +2,7 @@
 
 ## Choisir la base NoSQL adequate pour traiter les données suivantes:
 
-Importer le fichier `relation_dechets_exutoire.csv` dans Cassandra et construire une ou des tables qui sont en mesure de répondre aux questions suivantes:
+Importer le fichier `relation_dechets_exutoire.csv` et construire une ou des tables qui sont en mesure de répondre aux questions suivantes:
 
 1. Quel est le nombre d'exutoires pour les déchets `Dématérialisation` ?
 2. Quel est le type d'exutoire pour les déchets de `Peinture à l'eau` ?
@@ -34,4 +34,4 @@ Importer le fichier `atmo-indice.geojson` dans Mongo et répondre aux questions 
 11. Quelle serait la clé de sharding à utiliser pour pouvoir s'assurer que tous les enregistrements d'une même commune soient traités par le même noeud ?
 
 ### A rendre avant le 20/11/2023 00:00:00
-à l'adresse mail: `erwan` `[at]` `gmail.com`
+à l'adresse mail: `erwan.koffi` `[at]` `gmail.com`
