@@ -33,4 +33,5 @@ Importer le fichier `atmo-indice.geojson` dans Mongo et répondre aux questions 
 10. Quelle est la commune qui a l'indice de concentration d'ozone le plus faible sur la période observée ?
 11. Quelle serait la clé de sharding à utiliser pour pouvoir s'assurer que tous les enregistrements d'une même commune soient traités par le même noeud ?
 
-### A rendre avant le 11/11/2023 00:00:00
+### A rendre avant le 20/11/2023 00:00:00
+à l'adresse mail: `erwan` `[at]` `gmail.com`
