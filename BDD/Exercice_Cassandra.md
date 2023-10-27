@@ -2,7 +2,7 @@
 
 `pip install cqlsh`
 
-`cqlsh --cqlversion=3.4.5 iti-tdm-22.insa-rouen.fr`
+`cqlsh`
 
 # Exercice 1
 
